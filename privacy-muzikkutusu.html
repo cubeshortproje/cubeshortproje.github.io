@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="google" content="notranslate">
+    <title>Kullanım ve Gizlilik Poliçesi | Cube Short - Müzik Kutusu</title>
+    <style>
+        /* PREMIUM TASARIM DEĞİŞKENLERİ */
+        :root {
+            --bg-base: #09090b;
+            --card-bg: rgba(24, 24, 27, 0.7);
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #8b5cf6;
+            --accent-glow: rgba(139, 92, 246, 0.4);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="light"] {
+            --bg-base: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.3);
+            --border: rgba(0, 0, 0, 0.1);
+        }
+
+        * { box-sizing: border-box; }
+
+        /* KOPYALAMA VE OKUMA MODU KALKANI */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            transition: background-color 0.5s ease, color 0.5s ease;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        .glass-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px 20px;
+            padding: 40px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-glow);
+            transition: all 0.5s ease;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .wolf-svg {
+            width: 55px;
+            height: 55px;
+            fill: var(--accent);
+            filter: drop-shadow(0 0 10px var(--accent-glow));
+        }
+
+        .brand-titles {
+            text-align: left;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--text-main), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .app-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .theme-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            width: 50px;
+        }
+
+        .theme-btn:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .lang-select {
+            appearance: none;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            border-radius: 12px;
+            padding: 10px 40px 10px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+
+        .lang-select:focus { border-color: var(--accent); }
+        .lang-select option { background: var(--bg-base); color: var(--text-main); }
+
+        #policy-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .article-text { margin-bottom: 20px; text-align: justify; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 25px;
+            font-weight: 500;
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-container">
+    <div class="header">
+        <div class="logo-box">
+            <svg class="wolf-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.96 1.07C11.66.97 11.34.97 11.04 1.07L2.04 4.07C1.41 4.28 1 4.88 1 5.54V10.5C1 15.65 4.61 20.35 9.46 22.56C11.06 23.3 12.94 23.3 14.54 22.56C19.39 20.35 23 15.65 23 10.5V5.54C23 4.88 22.59 4.28 21.96 4.07L12.96 1.07C12.63.96 12.29.96 11.96 1.07ZM12 3.19L20 5.85V10.5C20 14.41 17.18 18.06 13.56 19.91C12.58 20.41 11.42 20.41 10.44 19.91C6.82 18.06 4 14.41 4 10.5V5.85L12 3.19ZM11.17 12.08C10.74 12.26 10.26 12.26 9.83 12.08L6.83 10.83L7.6 9L9.5 9.79L12.08 6.58C12.64 5.87 13.72 5.92 14.22 6.67L16.4 10.04C16.8 10.66 16.5 11.5 15.78 11.75L11.17 12.08Z"/>
+            </svg>
+            <div class="brand-titles">
+                <div class="brand-name">Cube Short</div>
+                <div class="app-name">Müzik Kutusu</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <select class="lang-select" id="langBox" onchange="renderPolicy()">
+                <option value="tr">Türkçe (🇹🇷)</option>
+                <option value="en">English (🇬🇧)</option>
+                <option value="de">Deutsch (🇩🇪)</option>
+                <option value="fr">Français (🇫🇷)</option>
+                <option value="es">Español (🇪🇸)</option>
+                <option value="ru">Русский (🇷🇺)</option>
+                <option value="id">Indonesia (🇮🇩)</option>
+                <option value="ar">العربية (🇸🇦)</option>
+                <option value="az">Azərbaycanca (🇦🇿)</option>
+                <option value="ur">اردو (🇵🇰)</option>
+                <option value="zh">中文 (🇨🇳)</option>
+            </select>
+            <button class="theme-btn" onclick="toggleTheme()" id="themeIcon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="policy-content"></div>
+
+    <div class="footer" id="dynamic-footer"></div>
+</div>
+
+<script>
+    document.addEventListener('keydown', function(e) {
+        if(e.ctrlKey || e.metaKey) {
+            if(e.key === 'c' || e.key === 'v' || e.key === 'x' || e.key === 'a' || e.key === 's' || e.key === 'p' || e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+        }
+    });
+
+    function toggleTheme() {
+        const body = document.body;
+        const iconContainer = document.getElementById('themeIcon');
+        
+        if (body.getAttribute('data-theme') === 'light') {
+            body.removeAttribute('data-theme');
+            iconContainer.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+        } else {
+            body.setAttribute('data-theme', 'light');
+            iconContainer.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+        }
+    }
+
+    // YENİ: Her dil nesnesine özel "footerText" özelliği eklendi.
+    const policies = {
+        tr: {
+            title: `KULLANIM VE GİZLİLİK POLİÇESİ`,
+            intro: `İşbu Kapsamlı Dijital Platform Kullanım Muvafakatnamesi, Entegre Hizmet Şartları, Genişletilmiş Gizlilik Politikası, Veri İşleme Şartnamesi ve Mutlak Sorumluluk Muafiyeti Sözleşmesi (“Sözleşme”); Cube Short markası, bağlı iştirakleri, platform bünyesinde yer alan tüm yazılım geliştiricileri, teknik ekipler ve kurucu ortaklar (bundan böyle müştereken “Cube Short” veya “Veri Sorumlusu” olarak anılacaktır) ile uygulamaya herhangi bir mobil cihaz, emülatör veya harici donanım üzerinden erişim sağlayan, indiren, kuran veya fiilen kullanan tüm gerçek kişiler (bundan böyle “Kullanıcı” veya “Muhatap” olarak anılacaktır) arasında hukuken tam bağlayıcı, gayrikabili rücu bir akit olarak tanzim edilmiştir.`,
+            articles: [
+                { title: `Madde 1: Mutlak Sorumluluk Muafiyeti, Geliştirici Sorumsuzluğu ve Yazılımın Doğası`, text: `Uygulamanın kullanımı, tamamen ve istisnasız olarak Kullanıcı'nın kendi özgür iradesi, inisiyatifi ve şahsi riski tahtında gerçekleşmektedir. Yazılım dünyasının doğası gereği, hiçbir dijital platform kusursuz veya hatasız (bug-free) değildir. Cube Short markası, platformun geliştiricileri ve kurucuları; uygulamanın işleyişi, kesintisiz hizmet ifası, cihaz donanımları ile mutlak uyumluluğu hususunda sarih veya zımni hiçbir garanti vermemektedir. Uygulamanın kullanımı esnasında veya kullanımı neticesinde meydana gelebilecek yazılımsal çökmeler, sistem hataları, veri kayıpları, cihaz arızaları ve bunlardan doğabilecek doğrudan, dolaylı, arızi, özel veya cezai hiçbir maddi, manevi, hukuki veya cezai zarardan Cube Short sorumlu tutulamaz.` },
+                { title: `Madde 2: Veri Gizliliği, Siber Güvenlik İhlalleri ve Veri Hırsızlığı`, text: `Cube Short, platform altyapısının korunması adına makul çabayı gösterse de, siber uzayda mutlak (yüzde yüz) bir güvenliğin teknik olarak mümkün olmadığını Kullanıcı peşinen kabul eder. Küresel veya yerel ağlar üzerinden gerçekleşebilecek olası siber saldırılar, veri tabanına yönelik yasadışı sızma girişimleri (hacking), veri hırsızlığı fiilleri, siber casusluk, kötü amaçlı yazılımların (malware, ransomware) sisteme enjekte edilmesi veya sunucu altyapılarına yönelik sabote edici eylemler neticesinde Kullanıcı verilerinin veya şahsi tanımlayıcıların üçüncü şahısların eline geçmesi, ifşa olması veya tahrif edilmesi durumunda Cube Short hiçbir hukuki reaksiyona veya tazminat yükümlülüğüne tabi tutulamaz. Bu tür ihlaller yazılım ekosisteminin olağan risklerindendir ve tüm sorumluluk münhasıran Kullanıcı'ya aittir.` },
+                { title: `Madde 3: Üçüncü Taraf Reklam Ağları ve Harici Bağlantılar`, text: `Platform dahilinde gösterilen, entegre edilen veya üçüncü taraf reklam sağlayıcı ağlar vasıtasıyla dinamik olarak arayüze yerleştirilen reklamlar, Cube Short tarafından manuel olarak seçilmemekte veya denetlenmemektedir. Gösterilen hiçbir reklamın, sponsorluk faaliyetinin, ticari banner yerleşiminin veya yönlendirici harici bağlantıların (hyperlink) içeriğinden, güvenilirliğinden veya zararlı yazılım barındırıp barındırmadığından Cube Short sorumlu değildir. Kullanıcı, bu içeriklere tıklayarak harici ağlara yönlendirildiğinde tüm riskleri tek başına üstlendiğini teyit eder.` },
+                { title: `Madde 4: Yaş Sınırlandırması, Ebeveyn Denetimi ve Kusursuz Gözetim Yükümlülüğü`, text: `Uygulamanın kullanımı temel olarak 13 yaş ve üzeri yetişkin veya mümeyyiz bireylerin kullanımına uygun olarak tasarlanmıştır. Platforma erişim sağlayan 13 yaş altındaki reşit olmayan (minor) her kullanıcının uygulamayı indirmesi, kullanması ve uygulama içi eylemlerinden doğrudan doğruya velileri, vasileri veya kanuni ebeveynleri sorumludur. Küçük çocukların uygulamayı kullanması kesinlikle aile rızasına ve mutlak gözetimine tabidir. Ebeveynler, çocuklarının uygulamayı kullanımı, reklam etkileşimleri ve olası veri paylaşımları üzerindeki her türlü denetim yükümlülüğünü eksiksiz olarak yerine getirmekle mükelleftir. Bu yükümlülüklerin ihlali durumunda doğacak her türlü hukuki, mali ve cezai müeyyidenin yegane muhatabı veli/vasi olup, Cube Short hiçbir sorumluluk kabul etmez.` },
+                { title: `Madde 5: Mülkiyet Hakları, Telif Hakkı (Copyright) ve Kopyalama Yasağı`, text: `Platform dahilinde yer alan tüm kaynak kodlar, arayüz tasarımları, algoritmalar, grafikler, logolar, ticari markalar, metinler ve Cube Short markasına ait veya onun tarafından geliştirilmiş olan her türlü dijital varlığın fikri ve sınai mülkiyet hakları münhasıran Cube Short ve kurucu kadrosuna aittir. İşbu platformun veya içerisindeki herhangi bir kod parçacığının, tasarım öğesinin, tersine mühendislik (reverse engineering) yöntemleriyle kaynak koda dönüştürülmesi, decompile edilmesi, kopyalanması, çoğaltılması, taklit edilmesi, kısmen veya tamamen dağıtılması, lisanssız olarak harici mecralarda ticari veya gayriticari amaçlarla paylaşılması kesinlikle yasaktır. Cube Short, bu tür ihlalleri gerçekleştiren gerçek veya tüzel kişiler hakkında ulusal ve uluslararası hukuk kuralları çerçevesinde her türlü hukuki, mali ve cezai takibatı başlatma, maddi ve manevi tazminat davası ikame etme hakkını saklı tutar. © Cube Short. Tüm Hakları Saklıdır (All Rights Reserved).` },
+                { title: `Madde 6: Delil Sözleşmesi, Yargı Yetkisi ve Feragat`, text: `İşbu poliçe metni, 6100 sayılı Hukuk Muhakemeleri Kanunu uyarınca bir delil sözleşmesi niteliğindedir. Kullanıcı, işbu metni onaylamakla, metinde yer alan karmaşık hukuki terminolojinin bağlayıcılığını mutlak suretle anladığını ve kabul ettiğini, olası veri ihlalleri, yazılım hataları veya reklam kaynaklı zararlar sebebiyle Cube Short markasına ve kurucularına yönelik her türlü idari, cezai veya kazai talep, şikayet ve dava açma hakkından peşinen, gayrikabili rücu olarak feragat ettiğini beyan ve taahhüt eder.` },
+                { title: `Madde 7: Açık Kaynak Lisansları ve Ücretsiz Altyapı Kullanımı`, text: `Müzik Kutusu; kullanıcılarına kesintisiz ve ücretsiz bir deneyim sunabilmek amacıyla açık kaynak kodlu (Open-Source) ve ticari kullanıma açık ücretsiz altyapılar (Media3, Coil, LrcLib API, iTunes Search API vb.) kullanılarak geliştirilmiştir. Bu servislerin kullanımı, ilgili sağlayıcıların global lisans sözleşmelerine %100 uygundur. Uygulama içerisindeki hiçbir kod parçacığında telif hakkı ihlali barındıran gizli bir lisanslı ürün bulunmamaktadır.` }
+            ],
+            footerText: `© 2026 Cube Short. Tüm Hakları Saklıdır. <br> Bu doküman hukuki koruma altındadır. İzinsiz çoğaltılamaz ve kopyalanamaz.`
+        },
+        en: {
+            title: `TERMS OF USE AND PRIVACY POLICY`,
+            intro: `This Comprehensive Digital Platform Terms of Use, Integrated Service Conditions, Extended Privacy Policy, Data Processing Specification, and Absolute Exemption of Liability Agreement (“Agreement”) is established as a fully legally binding and irrevocable contract between the Cube Short brand, its affiliates, all software developers, technical teams, and founding partners within the platform (hereinafter jointly referred to as “Cube Short” or “Data Controller”) and all natural persons (hereinafter referred to as “User” or “Addressee”) who access, download, install, or physically use the application via any mobile device, emulator, or external hardware.`,
+            articles: [
+                { title: `Article 1: Absolute Exemption of Liability, Developer Immunity, and the Nature of Software`, text: `The use of the application is entirely and without exception under the User's own free will, initiative, and personal risk. By the nature of the software world, no digital platform is flawless or bug-free. The Cube Short brand, developers, and founders make no express or implied warranties regarding the operation of the application, uninterrupted service delivery, or absolute compatibility with device hardware. Cube Short cannot be held liable for software crashes, system errors, data losses, device malfunctions that may occur during or as a result of the use of the application, nor for any direct, indirect, incidental, special, or punitive financial, moral, legal, or criminal damages arising from them.` },
+                { title: `Article 2: Data Privacy, Cybersecurity Breaches, and Data Theft`, text: `Although Cube Short makes reasonable efforts to protect the platform infrastructure, the User accepts in advance that absolute (one hundred percent) security in cyberspace is technically impossible. Cube Short shall not be subject to any legal reaction or compensation obligation in the event that User data or personal identifiers fall into the hands of third parties, are exposed, or falsified as a result of possible cyberattacks over global or local networks, illegal hacking attempts on the database, data theft acts, cyber espionage, injection of malicious software (malware, ransomware) into the system, or sabotaging actions against server infrastructures. Such violations are ordinary risks of the software ecosystem, and all responsibility rests exclusively with the User.` },
+                { title: `Article 3: Third-Party Advertising Networks and External Links`, text: `Advertisements displayed, integrated within the platform, or dynamically placed on the interface via third-party advertising provider networks are not manually selected or audited by Cube Short. Cube Short is not responsible for the content, reliability, or whether it contains malware of any displayed advertisement, sponsorship activity, commercial banner placement, or directing external links (hyperlinks). The User confirms that they bear all risks alone when directed to external networks by clicking on these contents.` },
+                { title: `Article 4: Age Restriction, Parental Control, and Absolute Supervision Obligation`, text: `The use of the application is primarily designed for adults aged 13 and over or discerning individuals. Parents, guardians, or legal parents are directly responsible for the downloading, use, and in-app actions of any minor (under 13) user accessing the platform. The use of the application by young children is strictly subject to family consent and absolute supervision. Parents are obliged to fully fulfill all their supervision obligations over their children's use of the application, ad interactions, and possible data sharing. The sole addressee of any legal, financial, and criminal sanctions arising from the violation of these obligations is the parent/guardian, and Cube Short accepts no responsibility.` },
+                { title: `Article 5: Property Rights, Copyright, and Prohibition of Copying`, text: `Intellectual and industrial property rights of all source codes, interface designs, algorithms, graphics, logos, trademarks, texts, and any digital asset belonging to or developed by the Cube Short brand within the platform belong exclusively to Cube Short and its founding team. It is strictly forbidden to reverse engineer, decompile, copy, reproduce, imitate, partially or completely distribute, or share any code snippet or design element within this platform in external channels for commercial or non-commercial purposes without a license. Cube Short reserves the right to initiate all kinds of legal, financial, and criminal proceedings and file lawsuits for material and moral compensation within the framework of national and international legal rules against real or legal persons who commit such violations. © Cube Short. All Rights Reserved.` },
+                { title: `Article 6: Evidentiary Contract, Jurisdiction, and Waiver`, text: `This policy text constitutes an evidentiary contract. By approving this text, the User declares and undertakes that they absolutely understand and accept the binding nature of the complex legal terminology contained herein, and irreversibly waives the right to make any administrative, criminal, or judicial requests, complaints, and lawsuits against the Cube Short brand and its founders due to possible data breaches, software errors, or advertisement-related damages.` },
+                { title: `Article 7: Open Source Licenses and Free Infrastructure Use`, text: `Music Box has been developed using open-source and free-for-commercial-use infrastructures (Media3, Coil, LrcLib API, iTunes Search API, etc.) in order to offer its users an uninterrupted and free experience. The use of these services is 100% in compliance with the global license agreements of the relevant providers. There is no hidden licensed product containing copyright infringement in any code snippet within the application.` }
+            ],
+            footerText: `© 2026 Cube Short. All Rights Reserved. <br> This document is under legal protection. Unauthorized reproduction and copying are prohibited.`
+        },
+        de: {
+            title: `NUTZUNGS- UND DATENSCHUTZRICHTLINIE`,
+            intro: `Diese Vereinbarung ist ein rechtsverbindlicher, unwiderruflicher Vertrag zwischen der Marke Cube Short, ihren Entwicklern („Cube Short“) und allen natürlichen Personen („Benutzer“), die die Anwendung herunterladen, installieren oder physisch nutzen.`,
+            articles: [
+                { title: `Artikel 1: Absolute Haftungsbefreiung und Natur der Software`, text: `Die Nutzung der Anwendung erfolgt ausnahmslos aus freiem Willen und auf persönliches Risiko des Benutzers. Keine digitale Plattform ist fehlerfrei (bug-free). Cube Short übernimmt keine Garantien bezüglich der absoluten Kompatibilität. Cube Short haftet nicht für Softwareabstürze, Systemfehler, Datenverluste, Geräteausfälle oder daraus resultierende direkte, indirekte oder strafende Schäden.` },
+                { title: `Artikel 2: Datenschutz, Cybersicherheitsverletzungen und Datendiebstahl`, text: `Obwohl Cube Short angemessene Anstrengungen unternimmt, um die Plattform zu schützen, akzeptiert der Benutzer im Voraus, dass absolute Sicherheit im Cyberspace technisch unmöglich ist. Cube Short unterliegt keiner Entschädigungspflicht im Falle von Cyberangriffen, Hacking, Datendiebstahl oder der Injektion von Malware. Alle Verantwortung liegt ausschließlich beim Benutzer.` },
+                { title: `Artikel 3: Werbenetzwerke von Drittanbietern und externe Links`, text: `Anzeigen von Drittanbietern werden nicht von Cube Short manuell ausgewählt oder geprüft. Cube Short ist nicht verantwortlich für den Inhalt, die Zuverlässigkeit oder potenziell schädliche Software von Anzeigen oder Hyperlinks. Der Benutzer trägt alle Risiken allein.` },
+                { title: `Artikel 4: Altersbeschränkung und absolute Aufsichtspflicht der Eltern`, text: `Die App ist für Personen ab 13 Jahren konzipiert. Eltern oder gesetzliche Vormünder sind direkt für Handlungen von Minderjährigen verantwortlich. Die Nutzung durch kleine Kinder unterliegt der absoluten Aufsicht der Familie. Cube Short übernimmt diesbezüglich keine Verantwortung.` },
+                { title: `Artikel 5: Eigentumsrechte, Urheberrecht (Copyright) und Kopierverbot`, text: `Alle Quellcodes, Schnittstellendesigns, Algorithmen, Logos und geistigen Eigentumsrechte gehören ausschließlich Cube Short. Es ist strengstens verboten, diese Plattform ohne Lizenz durch Reverse Engineering zu entschlüsseln, zu kopieren, zu reproduzieren, nachzuahmen oder zu verbreiten. Cube Short behält sich das Recht auf rechtliche und strafrechtliche Schritte vor. © Cube Short. Alle Rechte vorbehalten.` },
+                { title: `Artikel 6: Beweisvertrag, Gerichtsbarkeit und Verzicht`, text: `Durch Zustimmung zu diesem Text erklärt der Benutzer, dass er die komplexe juristische Terminologie verstanden hat und unwiderruflich auf das Recht verzichtet, rechtliche Schritte oder Klagen gegen Cube Short wegen möglicher Datenlecks oder Softwarefehler einzuleiten.` },
+                { title: `Artikel 7: Open-Source-Lizenzen`, text: `Music Box wurde unter Verwendung von Open-Source-Infrastrukturen (Media3, Coil, LrcLib API, iTunes Search API usw.) entwickelt. Es gibt kein verstecktes lizenziertes Produkt, das Urheberrechte verletzt.` }
+            ],
+            footerText: `© 2026 Cube Short. Alle Rechte vorbehalten. <br> Dieses Dokument steht unter gesetzlichem Schutz. Unbefugte Vervielfältigung und Kopieren sind untersagt.`
+        },
+        fr: {
+            title: `CONDITIONS D'UTILISATION ET POLITIQUE DE CONFIDENTIALITÉ`,
+            intro: `Le présent Accord est un contrat juridiquement contraignant et irrévocable entre la marque Cube Short, ses développeurs (« Cube Short ») et toutes les personnes physiques (« Utilisateur ») qui téléchargent, installent ou utilisent physiquement l'application.`,
+            articles: [
+                { title: `Article 1 : Exonération absolue de responsabilité`, text: `L'utilisation de l'application relève de la libre volonté et du risque personnel de l'Utilisateur. Aucune plateforme numérique n'est exempte de bugs. Cube Short ne peut être tenu responsable des pannes logicielles, des pertes de données, des dysfonctionnements de l'appareil ou de tout dommage direct, indirect ou punitif.` },
+                { title: `Article 2 : Confidentialité des données et piratage`, text: `Une sécurité absolue à 100 % dans le cyberespace est techniquement impossible. Cube Short ne sera soumis à aucune obligation d'indemnisation en cas de cyberattaques, de piratage, de vol de données ou d'injection de logiciels malveillants. La responsabilité incombe exclusivement à l'Utilisateur.` },
+                { title: `Article 3 : Réseaux publicitaires tiers`, text: `Les publicités de réseaux tiers ne sont ni sélectionnées ni auditées par Cube Short. L'Utilisateur assume seul tous les risques en cliquant sur ces contenus.` },
+                { title: `Article 4 : Restriction d'âge et surveillance parentale`, text: `L'application est conçue pour les personnes âgées de 13 ans et plus. Les tuteurs légaux de tout mineur sont directement responsables de ses actions. Cube Short décline toute responsabilité.` },
+                { title: `Article 5 : Droits de propriété intellectuelle (Copyright)`, text: `Tous les codes sources, algorithmes, logos et droits de propriété intellectuelle appartiennent exclusivement à Cube Short. Il est strictement interdit de copier, reproduire, imiter ou effectuer de l'ingénierie inverse sans licence. © Cube Short. Tous droits réservés.` },
+                { title: `Article 6 : Renonciation`, text: `L'Utilisateur renonce irrévocablement au droit d'engager des poursuites contre Cube Short en raison d'éventuelles violations de données ou d'erreurs logicielles.` },
+                { title: `Article 7 : Licences Open Source`, text: `Music Box a été développée à l'aide d'infrastructures open-source (Media3, Coil, LrcLib API, etc.). Il n'y a aucune violation des droits d'auteur.` }
+            ],
+            footerText: `© 2026 Cube Short. Tous droits réservés. <br> Ce document est sous protection légale. La reproduction et la copie non autorisées sont interdites.`
+        },
+        es: {
+            title: `CONDICIONES DE USO Y POLÍTICA DE PRIVACIDAD`,
+            intro: `Este Acuerdo se establece como un contrato legalmente vinculante e irrevocable entre la marca Cube Short, sus desarrolladores ("Cube Short") y todas las personas físicas ("Usuario") que descarguen o utilicen la aplicación.`,
+            articles: [
+                { title: `Artículo 1: Exención absoluta de responsabilidad`, text: `El uso de la aplicación es bajo el libre albedrío y riesgo personal del Usuario. Ninguna plataforma digital está libre de errores (bug-free). Cube Short no se hace responsable de caídas de software, pérdida de datos o daños directos o indirectos.` },
+                { title: `Artículo 2: Privacidad y ciberataques`, text: `El Usuario acepta que la seguridad absoluta en el ciberespacio es imposible. Cube Short no estará sujeto a ninguna obligación de compensación en caso de ciberataques, piratería o robo de datos.` },
+                { title: `Artículo 3: Redes publicitarias de terceros`, text: `Los anuncios de terceros no son auditados por Cube Short. El Usuario asume todos los riesgos al hacer clic en estos enlaces.` },
+                { title: `Artículo 4: Restricción de edad y control parental`, text: `La aplicación está diseñada para mayores de 13 años. Los padres son directamente responsables de las acciones de los menores. Cube Short no acepta ninguna responsabilidad.` },
+                { title: `Artículo 5: Propiedad intelectual y Copyright`, text: `Todos los códigos fuente, logotipos y derechos de propiedad intelectual pertenecen exclusivamente a Cube Short. Está estrictamente prohibido aplicar ingeniería inversa, copiar, imitar o distribuir esta plataforma sin licencia. © Cube Short. Todos los derechos reservados.` },
+                { title: `Artículo 6: Renuncia`, text: `El Usuario renuncia irrevocablemente al derecho de demandar a Cube Short por posibles filtraciones de datos o errores de software.` },
+                { title: `Artículo 7: Licencias de código abierto`, text: `Music Box se ha desarrollado utilizando infraestructuras de código abierto (Media3, Coil, LrcLib API, etc.). No hay infracción de derechos de autor oculta.` }
+            ],
+            footerText: `© 2026 Cube Short. Todos los derechos reservados. <br> Este documento está bajo protección legal. Queda prohibida la reproducción y copia no autorizadas.`
+        },
+        ru: {
+            title: `УСЛОВИЯ ИСПОЛЬЗОВАНИЯ И ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ`,
+            intro: `Данное Соглашение является юридически обязательным и безотзывным договором между брендом Cube Short, его разработчиками («Cube Short») и всеми физическими лицами («Пользователь»).`,
+            articles: [
+                { title: `Статья 1: Абсолютное освобождение от ответственности`, text: `Использование приложения осуществляется исключительно на личный страх и риск Пользователя. Ни одна платформа не свободна от ошибок. Cube Short не несет ответственности за сбои программного обеспечения, потерю данных или любые убытки.` },
+                { title: `Статья 2: Конфиденциальность данных и кибератаки`, text: `Абсолютная безопасность в киберпространстве технически невозможна. Cube Short не несет обязательств по выплате компенсаций в случае кибератак или кражи данных.` },
+                { title: `Статья 3: Сторонние рекламные сети`, text: `Cube Short не несет ответственности за содержание сторонней рекламы. Пользователь принимает на себя все риски при переходе по внешним ссылкам.` },
+                { title: `Статья 4: Возрастные ограничения`, text: `Приложение предназначено для лиц старше 13 лет. Родители несут прямую ответственность за действия несовершеннолетних.` },
+                { title: `Статья 5: Интеллектуальная собственность (Copyright)`, text: `Все исходные коды, логотипы и алгоритмы принадлежат исключительно Cube Short. Копирование, обратная разработка или распространение без лицензии строго запрещены. © Cube Short. Все права защищены.` },
+                { title: `Статья 6: Отказ от прав`, text: `Пользователь безотзывно отказывается от права подавать иски против Cube Short в связи с утечками данных или программными ошибками.` },
+                { title: `Статья 7: Лицензии с открытым исходным кодом`, text: `Music Box разработан с использованием открытого исходного кода (Media3, Coil, LrcLib API и др.).` }
+            ],
+            footerText: `© 2026 Cube Short. Все права защищены. <br> Этот документ находится под правовой защитой. Несанкционированное воспроизведение и копирование запрещены.`
+        },
+        id: {
+            title: `SYARAT PENGGUNAAN DAN KEBIJAKAN PRIVASI`,
+            intro: `Perjanjian ini ditetapkan sebagai kontrak yang mengikat secara hukum dan tidak dapat dibatalkan antara merek Cube Short ("Cube Short") dan semua orang perseorangan ("Pengguna").`,
+            articles: [
+                { title: `Pasal 1: Pengecualian Tanggung Jawab Mutlak`, text: `Penggunaan aplikasi sepenuhnya berada di bawah risiko pribadi Pengguna. Tidak ada platform yang bebas bug. Cube Short tidak dapat dimintai pertanggungjawaban atas kerusakan perangkat lunak, hilangnya data, atau kerugian langsung maupun tidak langsung.` },
+                { title: `Pasal 2: Keamanan Siber dan Pencurian Data`, text: `Keamanan mutlak (100%) di dunia maya adalah mustahil. Cube Short tidak akan tunduk pada kewajiban kompensasi jika terjadi serangan siber, peretasan, atau pencurian data. Semua tanggung jawab berada pada Pengguna.` },
+                { title: `Pasal 3: Jaringan Iklan Pihak Ketiga`, text: `Iklan dari jaringan pihak ketiga tidak diaudit oleh Cube Short. Pengguna menanggung semua risiko saat mengklik tautan eksternal.` },
+                { title: `Pasal 4: Batasan Usia dan Kontrol Orang Tua`, text: `Aplikasi ini untuk usia 13 tahun ke atas. Orang tua bertanggung jawab langsung atas tindakan anak di bawah umur.` },
+                { title: `Pasal 5: Hak Kekayaan Intelektual (Hak Cipta)`, text: `Semua kode sumber, logo, dan hak kekayaan intelektual milik eksklusif Cube Short. Dilarang keras merekayasa balik, menyalin, meniru, atau mendistribusikan tanpa lisensi. © Cube Short. Semua Hak Dilindungi Undang-Undang.` },
+                { title: `Pasal 6: Pelepasan Hak`, text: `Pengguna secara tidak dapat dibatalkan melepaskan hak untuk menuntut Cube Short atas kemungkinan kebocoran data atau kesalahan perangkat lunak.` },
+                { title: `Pasal 7: Lisensi Sumber Terbuka`, text: `Music Box dikembangkan menggunakan infrastruktur sumber terbuka (Media3, Coil, LrcLib API, dll.).` }
+            ],
+            footerText: `© 2026 Cube Short. Hak Cipta Dilindungi Undang-Undang. <br> Dokumen ini berada di bawah perlindungan hukum. Dilarang memperbanyak dan menyalin tanpa izin.`
+        },
+        ar: {
+            title: `شروط الاستخدام وسياسة الخصوصية`,
+            intro: `تم إنشاء هذه الاتفاقية كعقد ملزم قانونًا وغير قابل للإلغاء بين العلامة التجارية Cube Short وجميع الأشخاص الطبيعيين.`,
+            articles: [
+                { title: `المادة 1: الإعفاء المطلق من المسؤولية`, text: `استخدام التطبيق يخضع بالكامل للمخاطرة الشخصية للمستخدم. لا توجد منصة خالية من الأخطاء. لا يمكن تحميل Cube Short المسؤولية عن أعطال البرامج أو فقدان البيانات أو أي أضرار.` },
+                { title: `المادة 2: الأمن السيبراني وسرقة البيانات`, text: `الأمان المطلق في الفضاء الإلكتروني مستحيل فنيًا. لن تتحمل Cube Short أي التزام بالتعويض في حالة الهجمات السيبرانية أو سرقة البيانات.` },
+                { title: `المادة 3: إعلانات الطرف الثالث`, text: `لا تقوم Cube Short بمراجعة إعلانات الجهات الخارجية. يتحمل المستخدم جميع المخاطر عند النقر.` },
+                { title: `المادة 4: قيود العمر`, text: `التطبيق مخصص لمن تبلغ أعمارهم 13 عامًا فأكثر. الآباء مسؤولون مباشرة عن أفعال القاصرين.` },
+                { title: `المادة 5: حقوق النشر والملكية الفكرية`, text: `تعود ملكية جميع الأكواد والشعارات حصريًا إلى Cube Short. يُمنع منعًا باتًا النسخ أو الهندسة العكسية بدون ترخيص. © Cube Short. جميع الحقوق محفوظة.` },
+                { title: `المادة 6: التنازل`, text: `يتنازل المستخدم بشكل لا رجعة فيه عن حقه في مقاضاة Cube Short.` },
+                { title: `المادة 7: المصادر المفتوحة`, text: `تم تطوير Music Box باستخدام بنيات تحتية مفتوحة المصدر.` }
+            ],
+            footerText: `© 2026 Cube Short. جميع الحقوق محفوظة. <br> هذه الوثيقة تحت الحماية القانونية. الاستنساخ والنسخ غير المصرح به محظور.`
+        },
+        az: {
+            title: `İSTİFADƏ VƏ MƏXFİLİK SİYASƏTİ`,
+            intro: `Bu Müqavilə Cube Short markası, tərtibatçıları (“Cube Short”) və bütün fiziki şəxslər (“İstifadəçi”) arasında hüquqi baxımdan tam məcburi və geri alınmaz bir müqavilə kimi tərtib edilmişdir.`,
+            articles: [
+                { title: `Maddə 1: Mütləq Məsuliyyətdən Azad Olma`, text: `Tətbiqdən istifadə tamamilə İstifadəçinin öz riski altındadır. Heç bir rəqəmsal platforma qüsursuz deyil. Proqram çökmələri, məlumat itkiləri və ya hər hansı zərərlərə görə Cube Short məsuliyyət daşımır.` },
+                { title: `Maddə 2: Kiber Təhlükəsizlik İhlalları və Məlumat Oğurluğu`, text: `Kiber məkanda 100% təhlükəsizlik qeyri-mümkündür. Kiber hücumlar, haker müdaxilələri və ya məlumat oğurluğu halında Cube Short heç bir təzminat öhdəliyi daşımır.` },
+                { title: `Maddə 3: Üçüncü Tərəf Reklamları`, text: `Göstərilən reklamların məzmununa görə Cube Short məsuliyyət daşımır. İstifadəçi xarici şəbəkələrə yönləndirildikdə bütün riskləri öz üzərinə götürür.` },
+                { title: `Maddə 4: Yaş Məhdudiyyəti və Valideyn Nəzarəti`, text: `Tətbiq 13 yaş və yuxarı şəxslər üçün nəzərdə tutulmuşdur. Valideynlər yetkinlik yaşına çatmayanların hərəkətlərinə görə birbaşa məsuliyyət daşıyır.` },
+                { title: `Maddə 5: Əqli Mülkiyyət Hüquqları (Copyright)`, text: `Bütün mənbə kodları, loqolar və əqli mülkiyyəti hüquqları müstəsna olaraq Cube Short-a aiddir. Lisenziyasız kopyalamaq, təqlid etmək və ya tərs mühəndislik etmək qəti qadağandır. © Cube Short. Bütün Hüquqlar Qorunur.` },
+                { title: `Maddə 6: Hüquqlardan İmtina`, text: `İstifadəçi məlumat sızıntıları və ya proqram xətalarına görə Cube Short-u məhkəməyə vermək hüququndan geri alınmaz şəkildə imtina edir.` },
+                { title: `Maddə 7: Açıq Mənbə Lisenziyaları`, text: `Music Box açıq mənbə infrastrukturundan (Media3, Coil, LrcLib API, iTunes Search API və s.) istifadə edərək hazırlanmışdır.` }
+            ],
+            footerText: `© 2026 Cube Short. Bütün Hüquqlar Qorunur. <br> Bu sənəd hüquqi qorunma altındadır. İcazəsiz çoxaltdılması və kopyalanması qadağandır.`
+        },
+        ur: {
+            title: `استعمال کی شرائط اور رازداری کی پالیسی`,
+            intro: `یہ معاہدہ Cube Short برانڈ اور تمام قدرتی افراد کے درمیان قانونی طور پر پابند اور ناقابل تنسیخ معاہدے کے طور پر قائم کیا گیا ہے۔`,
+            articles: [
+                { title: `آرٹیکل 1: مطلق ذمہ داری سے استثنیٰ`, text: `ایپلیکیشن کا استعمال مکمل طور پر صارف کی ذاتی خطرے پر ہے۔ کوئی بھی پلیٹ فارم خامیوں سے پاک نہیں ہے۔ سافٹ ویئر کے کریش ہونے، ڈیٹا ضائع ہونے، یا کسی بھی نقصانات کے لیے Cube Short کو ذمہ دار نہیں ٹھہرایا جا سکتا۔` },
+                { title: `آرٹیکل 2: سائبر سیکیورٹی اور ڈیٹا کی چوری`, text: `سائبر اسپیس میں 100% سیکیورٹی ناممکن ہے۔ سائبر حملوں یا ڈیٹا کی چوری کی صورت میں Cube Short معاوضے کی ذمہ داری کے تابع نہیں ہوگا۔` },
+                { title: `آرٹیکل 3: تھرڈ پارٹی ایڈورٹائزنگ نیٹ ورکس`, text: `Cube Short فریق ثالث کے اشتہارات کے مواد کا ذمہ دار نہیں ہے۔ صارف ان پر کلک کرتے وقت تمام خطرات برداشت کرتا ہے۔` },
+                { title: `آرٹیکل 4: عمر کی پابندی`, text: `ایپلیکیشن 13 سال اور اس سے زیادہ عمر کے افراد کے لیے ہے۔ نابالغوں کے اعمال کے لیے والدین براہ راست ذمہ دار ہیں۔` },
+                { title: `آرٹیکل 5: کاپی رائٹ`, text: `تمام سورس کوڈز اور لوگو خصوصی طور پر Cube Short کے ہیں۔ بغیر لائسنس کے ریورس انجینئرنگ، کاپی کرنا یا تقسیم کرنا سختی سے منع ہے۔ © Cube Short. جملہ حقوق محفوظ ہیں۔` },
+                { title: `آرٹیکل 6: دستبرداری`, text: `صارف اٹل طور پر Cube Short پر مقدمہ کرنے کے حق سے دستبردار ہوتا ہے۔` },
+                { title: `آرٹیکل 7: اوپن سورس لائسنس`, text: `Music Box کو اوپن سورس انفراسٹرکچر کا استعمال کرتے ہوئے تیار کیا گیا ہے۔` }
+            ],
+            footerText: `© 2026 Cube Short. جملہ حقوق محفوظ ہیں۔ <br> یہ دستاویز قانونی تحفظ کے تحت ہے۔ غیر مجاز تولید اور کاپی کرنا منع ہے۔`
+        },
+        zh: {
+            title: `使用条款与隐私政策`,
+            intro: `本协议在 Cube Short 品牌（“Cube Short”）与所有自然人（“用户”）之间确立为具有完全法律约束力且不可撤销的合同。`,
+            articles: [
+                { title: `第1条：绝对免责声明`, text: `使用该应用程序的风险完全由用户个人承担。 没有任何数字平台是完美无缺的。对于软件崩溃、数据丢失或任何损害，Cube Short 概不负责。` },
+                { title: `第2条：网络安全与数据盗窃`, text: `网络空间中 100% 的安全是不可能的。在发生网络攻击或数据盗窃的情况下，Cube Short 不承担赔偿义务。` },
+                { title: `第3条：第三方广告`, text: `Cube Short 不对第三方广告的内容负责。 用户在点击时承担所有风险。` },
+                { title: `第4条：年龄限制与父母控制`, text: `该应用程序专为13岁及以上人士设计。 父母对未成年人的行为负直接责任。` },
+                { title: `第5条：知识产权（Copyright）`, text: `所有源代码、徽标和知识产权专属于 Cube Short。 严禁在没有许可证的情况下进行逆向工程、复制或分发。 © Cube Short。保留所有权利。` },
+                { title: `第6条：权利放弃`, text: `用户不可撤销地放弃因数据泄露或软件错误而起诉 Cube Short 的权利。` },
+                { title: `第7条：开源许可证`, text: `Music Box 是使用开源基础设施（Media3、Coil、LrcLib API 等）开发的。不包含侵犯版权的代码。` }
+            ],
+            footerText: `© 2026 Cube Short. 保留所有权利。 <br> 本文件受法律保护。未经授权，禁止复制和抄袭。`
+        }
+    };
+
+    function renderPolicy() {
+        const lang = document.getElementById('langBox').value;
+        const container = document.getElementById('policy-content');
+        const footerContainer = document.getElementById('dynamic-footer');
+        const data = policies[lang];
+
+        // İçeriği temizle ve animasyonu sıfırla
+        container.innerHTML = '';
+        container.style.animation = 'none';
+        container.offsetHeight; 
+        container.style.animation = 'fadeIn 0.6s ease-out';
+        
+        // Footer temizle ve animasyonu sıfırla
+        footerContainer.style.animation = 'none';
+        footerContainer.offsetHeight; 
+        footerContainer.style.animation = 'fadeIn 0.6s ease-out';
+        
+        // RTL (Sağdan Sola) diller için yön ayarı
+        if (lang === 'ar' || lang === 'ur') {
+            container.setAttribute('dir', 'rtl');
+            container.style.textAlign = 'right';
+        } else {
+            container.setAttribute('dir', 'ltr');
+            container.style.textAlign = 'left';
+        }
+
+        // Ana Başlık
+        const mainTitle = document.createElement('h2');
+        mainTitle.textContent = data.title;
+        mainTitle.style.color = 'var(--text-main)';
+        mainTitle.style.textAlign = 'center';
+        mainTitle.style.marginBottom = '25px';
+        container.appendChild(mainTitle);
+
+        // Giriş Metni
+        const intro = document.createElement('div');
+        intro.className = 'article-text';
+        intro.innerHTML = `<strong>${data.intro}</strong>`;
+        container.appendChild(intro);
+
+        // Maddeler
+        data.articles.forEach(article => {
+            const artTitle = document.createElement('div');
+            artTitle.className = 'article-title';
+            artTitle.textContent = article.title;
+            
+            const artText = document.createElement('div');
+            artText.className = 'article-text';
+            artText.textContent = article.text;
+
+            container.appendChild(artTitle);
+            container.appendChild(artText);
+        });
+
+        // YENİ: Footer Kısmını Seçilen Dile Göre Doldur
+        footerContainer.innerHTML = data.footerText;
+    }
+
+    // Sayfa Yüklendiğinde Başlat
+    window.onload = () => {
+        renderPolicy();
+    };
+
+</script>
+
+</body>
+</html>
