@@ -467,7 +467,22 @@
         footerContainer.innerHTML = data.footerText;
     }
 
+    // YENİ: Sayfa yüklendiğinde otomatik dil algılama işlemi eklendi
     window.onload = () => {
+        const langBox = document.getElementById('langBox');
+        
+        // Tarayıcı dilini al (örn: "en-US", "tr-TR") ve ana dil kodunu (örn: "en", "tr") çıkar.
+        let userLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
+        
+        // Eğer kullanıcının dili desteklediğimiz diller arasında (policies objesinde) varsa seç,
+        // Yoksa varsayılan dil olarak İngilizce (en) olarak ayarla.
+        if (policies[userLang]) {
+            langBox.value = userLang;
+        } else {
+            langBox.value = 'en'; 
+        }
+
+        // Seçilen dile göre metinleri ekrana yansıt
         renderPolicy();
     };
 
